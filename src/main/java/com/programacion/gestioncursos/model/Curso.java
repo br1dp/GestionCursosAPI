@@ -1,5 +1,6 @@
 package com.programacion.gestioncursos.model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,7 +22,7 @@ public class Curso {
     private String nombre;
     private String modalidad;
     private LocalDate fecha_finalizacion;
-    @OneToMany(mappedBy="curso")
+    @OneToMany(mappedBy="curso", cascade=CascadeType.ALL)
     private List<Tema> lista_temas;
 
 }

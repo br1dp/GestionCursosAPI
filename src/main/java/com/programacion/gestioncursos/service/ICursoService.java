@@ -15,6 +15,8 @@ public interface ICursoService {
 
     public Curso findCurso(Long id);
 
-    public Curso editCurso(Long idOriginal, Long idNueva, String nombre,
+    public void editCurso(Long idOriginal, String nombre,
             String modalidad, LocalDate fecha_finalizacion, List<Tema> lista_temas);
+    
+    public List<Curso> findWord(String word);
 }

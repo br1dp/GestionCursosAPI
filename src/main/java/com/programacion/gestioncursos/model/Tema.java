@@ -1,6 +1,6 @@
 package com.programacion.gestioncursos.model;
 
-import jakarta.persistence.Column;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,6 +22,7 @@ public class Tema {
     private String descripcion;
     @ManyToOne
     @JoinColumn(name = "id_curso")
+    @JsonIgnore
     private Curso curso;
 
 }
